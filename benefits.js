@@ -34,7 +34,7 @@ function displayBenefits(req,res,next)
 
 function displayBenefits0(req,res,next,succ)
 {
-   var q = "SELECT * FROM User U WHERE U.isAdmin = FALSE";
+   var q = "SELECT * FROM User U WHERE U.isAdmin = TRUE";
 
    db.query(q,function (e1,d1) { displayBenefits1(req,res,next,succ,e1,d1); } );
 }
